@@ -1,11 +1,12 @@
 services:
   web:
     build: .
+    container_name: django_auth
     restart: unless-stopped
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       #  - .:/app # Mount current directory to /app in the container
-      - djb_vol1:/app/data
+      - djb_vol1:/app/volume
 
     ports:
       - "8000:8000"
