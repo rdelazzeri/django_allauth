@@ -22,7 +22,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 SECRET_KEY = os.getenv("SECRET_KEY")
 DATABASE_URL = os.getenv("DATABASE_URL")
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
-CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS
+CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS", "").split(",")
 
 print(f'Allowed_hosts: {ALLOWED_HOSTS}')
 
