@@ -14,5 +14,11 @@
         <a href="/accounts/login">Login</a>
         <a href="/accounts/signup">Sign In</a>
         <a href="/accounts/logout">Logout</a>
+
+        <script src="//accounts.google.com/gsi/client" async></script>
+        <div id="g_id_onload"
+            data-client_id="123-secret.apps.googleusercontent.com"
+            data-login_uri="{% url 'google_login_by_token' %}">
+        </div>
     </body>
 </html>
